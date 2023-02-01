@@ -1,4 +1,2 @@
 # CPP
-
-
-scanf 遇空格便读下一个
+## 记录CPP commit
