@@ -9,7 +9,7 @@
 #include "vector"
 using namespace::std;
 
-string reverseWords(string s) {
+string reverseWords(string& s) {
     string::iterator left=s.begin();
     auto right = left;
     while( right < s.end() ){
