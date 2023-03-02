@@ -26,9 +26,21 @@ int main(int argc, const char * argv[]) {
 //
 //    t4s.combinationSum(candidates, 7);
 //    t5::t55();
-    t6::Solution t6;
+//    t6::Solution t6;
+//
+//    t6.partition("efe");
     
-    t6.partition("efe");
+//    t7::Solution t7;
+//    vector<int> nums4{-2,1,-3,4,-1,2,1,-5,4};
+//    cout << t7.maxSubArray(nums4) << endl;
     
-    
+//    vector<int> nums{-2,1,-3,4,-1,2,1,-5,4};
+//    t7::isStraight(nums);
+//    for(auto i : nums){
+//        cout << i << endl;
+//
+//    }
+//
+    cout << t2::hammingWeight(11) << endl;
+        
 }

@@ -71,6 +71,38 @@ void t22(){
     cout << map[s[0]-'0'] << endl;
     
 }
+
+void t23(){ // 快速幂问题
+    int n = -3;
+    cout << ( (-2) >> 1) <<endl;   // -1
+    cout << ( (-1) >> 1) <<endl;   // -1
+    cout << ( (-2) & 1) <<endl;    // 0
+    cout << ( (-1) & 1) <<endl;    // 1
+    
+    
+    // n = -3
+    cout << ( n >> 1) <<endl;   // -2
+    cout << ( n / 2) <<endl;    // -1
+    cout << "(-3) & 1 : "<< ( n & 1) <<endl;    //  1
+    cout << "(-3) % 2 : "<< ( (-3) % 2) <<endl; // -1
+    
+    
+}
+
+int hammingWeight(uint32_t n) {
+    int nums = 0;
+    
+//    cout << ( n & 1) <<endl;
+    while( n > 0 ){
+        nums += n & 1;
+        n = n >> 1;
+    }
+    return nums;
+}
+
+
+
+
 }
 
 namespace t3{
@@ -213,6 +245,38 @@ public:
 };
 }
 
+
+namespace t7 {
+
+class Solution {
+public:
+
+    vector<int> temp;
+    int tempMax = INT_MIN;
+    void backtracking(int startIndex, int tempVal, vector<int>& nums){
+        
+        if( tempVal > tempMax ){
+            tempMax = tempVal;
+        }
+        if(startIndex >= nums.size())   return;
+
+//        tempVal = 0;
+        for(int i = startIndex; i <= nums.size() - 1; ++i){
+            tempVal += nums[i];
+            backtracking(i + 1, tempVal, nums);
+            tempVal -= nums[i];
+        }
+    }
+
+    int maxSubArray(vector<int>& nums) {
+        backtracking(0, 0, nums);
+        return tempMax;
+    }
+};
+
+
+
+}
 
 
 
