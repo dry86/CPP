@@ -88,7 +88,36 @@ void print_binary_tree(TreeNode* root) {
     }
 }
 
-
-
+string serialize(TreeNode* root) {
+    string s="";
+    //r=root;
+    if(!root)return s;
+    queue<TreeNode*> q;
+    q.push(root);
+    while(!q.empty())
+    {
+        TreeNode* cur=q.front();
+        q.pop();
+        if(cur)
+        {
+            s+=to_string(cur->val);
+            q.push(cur->left);
+            q.push(cur->right);
+        }
+        else s+='#';
+        s+=' ';
+    }
+    while(s[s.size()-1]==' ' && s[s.size()-2]=='#'){
+        s.pop_back();
+        s.pop_back();
+    }
+    return s;   //1 2 3 # # 4 5 
+}
+//string serialize(TreeNode* root) {  //递归
+//    if(root == nullptr) return "#";
+//    return to_string(root->val) + " " +
+//            serialize(root->left) + " " +
+//            serialize(root->right); //1 2 # # 3 4 # # 5 # #
+//}
 
 #endif /* constructTree_h */

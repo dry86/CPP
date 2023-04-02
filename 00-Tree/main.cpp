@@ -42,11 +42,21 @@ int main(int argc, const char * argv[]) {
 //    TreeNode* root = construct_binary_tree(nums);
 //
 //    searchBST(root, 2);
-    vector<int> nums{5,3,6,2,4,-1,-1,1};
-    TreeNode* root = construct_binary_tree(nums);
-    searchTree(root);
-    cout << countk << endl;
-    cout << node->val << endl;
+//    vector<int> nums{5,3,6,2,4,-1,-1,1};
+//    TreeNode* root = construct_binary_tree(nums);
+//    searchTree(root);
+//    cout << countk << endl;
+//    cout << node->val << endl;
     
     
+//    vector<int> nums{1,2,3,-1,-1,4,5};
+//    TreeNode* root = construct_binary_tree(nums);
+//    cout << serialize(root) <<endl;
+//
+    
+    TreeNode* tn = new TreeNode;
+    
+    delete tn;
+    
+    return 0;
 }
